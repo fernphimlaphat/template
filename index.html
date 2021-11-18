@@ -1,5 +1,339 @@
-{% extends 'layout.html'%}
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- Site Metas -->
+    <title>Ecommerce</title>    
 
-{% block content %}
-<h1>กูเหนื่อยแล้วววววว</h1>
-{% endblock %}
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <!-- Site Icons -->
+    <!-- <link rel="shortcut icon" href="MYWEB2/images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="frontend/images/apple-touch-icon.png"> -->
+    <!-- Design fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet"> 
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+    <!-- FontAwesome Icons core CSS -->
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    
+    <!-- Responsive styles for this template -->
+    <link href="css/responsive.css" rel="stylesheet">
+
+    <!-- Colors for this template -->
+    <link href="css/colors.css" rel="stylesheet">
+
+    <!-- Version Tech CSS for this template -->
+    <link href="css/TopHeader.css" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/search1.css">  
+
+    <!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+    <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="js/vendor/animate/animate.css">
+    <!--===============================================================================================-->	
+        <link rel="stylesheet" type="text/css" href="js/vendor/css-hamburgers/hamburgers.min.css">
+    <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="js/vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="css/util.css">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {font-family: "Lato", sans-serif}
+    .mySlides {display: none}
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <header class="tech-header header">
+            <div class="container-fluid">
+                <nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
+                   
+                    <!-- ปุ่มย่อ -->
+                    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <!-- กด logo icon = รูปไอคอน -->
+                    <a class="navbar-brand" href="tech-index.html"><img src="images/logo.png" alt="" width="85px"></a>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+
+                        <form method="get" action="/search" id="search">
+                            <input name="q" type="text" size="40" placeholder="Search..." />
+                          </form>
+                      
+                        <ul class="navbar-nav mr-auto">
+
+                            <li class="nav-item dropdown">
+                                <!-- {% if request.user.is_authenticated and request.user.first_name %} -->
+                                  <a class="nav-link text-light dropdown-toggle" data-toggle="dropdown">
+                                    <!-- Welcome, {{ request.user.first_name }} -->
+                                    <i class="fas fa-user circle"></i>
+                                  </a>
+                                  <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="orderHistory.html">ประวัติการสั่งซื้อ</a>
+                                  </div>
+                                </li>
+                        
+
+                            <li class="nav-item">
+                                <a class="nav-link" id="image-cart" href="cartDetails.html"><i class="fa fa-shopping-cart fa-2x"></i></a>
+                            </li>
+
+                            <li class="nav-item">
+                                <!-- ลิ้งค์ไปอีกเว็บ -->
+                                <a class="nav-link text-light" href="index.html">Home</a>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a  class="nav-link text-light dropdown-toggle"
+                                href="menu.html" data-toggle="dropdown">Menu</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="menu.html" class="dropdown-item">เมนูแนะนำ</a></li>
+                                    <li><a href="menu2.html" class="dropdown-item">สเต็กเนื้อ</a></li>
+                                    <li><a href="menu3.html" class="dropdown-item">สเต็กไก่</a></li>
+                                    <li><a href="menu4.html" class="dropdown-item">สเต็กหมู</a></li>
+                                    <li><a href="menu5.html" class="dropdown-item">สเต็กปลา</a></li>
+                                    <li><a href="menu6.html" class="dropdown-item">เมนูทานเล่น</a></li>
+                                    <li><a href="menu7.html" class="dropdown-item">ไอศกรีม</a></li>
+                                    <li><a href="menu8.html" class="dropdown-item">เครื่องดื่ม</a></li>
+                                </ul>
+                            </li>
+                      
+                              <!-- {% else %} -->
+                              <li class="nav-item">
+                                <a class="nav-link text-light" href="register.html">register<i class="fas fa-user-plus"></i>
+                                </a>
+                              </li>
+                      
+                              <li class="nav-item">
+                                <a class="nav-link text-light" href="login.html">login<i class="fas fa-sign-in-alt"></i>
+                                </a>
+                              </li>
+
+                              <li class="nav-item">
+                                <a class="nav-link text-light" href="{% url 'signOut' %}">logout<i class="fas fa-sign-out-alt"></i>
+                                </a>
+                              </li>
+
+                              <li class="nav-item">
+                                <a class="nav-link" href="#">Contact Us</a>
+                            </li>
+                            
+                        </ul>
+
+                        <!-- รูปcontract -->
+                        <ul class="navbar-nav mr-2">
+                            <!-- wifi icon -->
+                            <!-- <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="fa fa-rss"></i></a>
+                            </li> -->
+                            <!-- andriod icon -->
+                            <!-- <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="fa fa-android"></i></a>
+                            </li> -->
+
+                            <!-- apple icon -->
+                            <!-- <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="fa fa-apple"></i></a>
+                            </li> -->
+
+                        </ul>
+                        
+                    </div>
+                </nav>
+            </div><!-- end container-fluid -->
+        </header><!-- end market-header -->
+    </div>
+    <!-- #####################################เนื้อหาแต่ละ section ############################################################-->
+    <!-- Page content -->
+    <div class="w3-content" style="max-width:2000px;margin-top:50px">
+
+        <!-- Automatic Slideshow Images -->
+        <div class="mySlides w3-display-container w3-center">
+        <img src="images/Artboard 2.jpg" style="width:100%">
+        <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+            <h3>Welcome</h3>
+            <p><b>Rock with you</b></p>   
+        </div>
+        </div>
+        <div class="mySlides w3-display-container w3-center">
+        <img src="images/food_BG2.jpg" style="width:100%">
+        <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+            <h3>Aroi</h3>
+            <p><b>The atmosphere in New York is lorem ipsum.</b></p>    
+        </div>
+        </div>
+        <div class="mySlides w3-display-container w3-center">
+        <img src="images/food_BG1.jpg" style="width:100%">
+        <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+            <h3>Makkkkk</h3>
+            <p><b>Thank you, Chicago - A night we won't forget.</b></p>    
+        </div>
+        </div>
+    <!-- The Band Section -->
+    <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+        <h2 class="w3-wide">"Promotion"</h2>
+        <p class="w3-opacity"><i>เฉพาะเดือนนี้เท่านั้น</i></p>
+        <p class="w3-justify"> สำหรับลูกค้าที่เพิ่งสมัครสมาชิกกับทางร้านเรา รับชุดเฟรนฟรายสุดคุ้ม ราคา 69 บาท (---ฟรี---) ไม่จำกัดยอดการสั่งซื้อ</p>
+        <div class="w3-row w3-padding-32">
+        
+    </div>
+    
+    <div class="pt-7 mb-5 mb-lg-10">
+        <div class="row g-4">
+            <div class="col-12 col-xl-6 position-relative" data-aos="fade-right">
+                <picture class="position-relative z-index-10">
+                    <img class="w-100 rounded" src="/images/drive-download-20211118T104030Z-001/gangster04.jpg" alt="HTML Bootstrap Template by Pixel Rocket">
+                </picture>
+                <div class="card-overlay">
+                    <p class="lead fw-bolder mb-2">เมนูแนะนำ</p>
+                    <a href="./category.html" class="btn btn-psuedo text-white py-2" role="button">เพิ่มลงตระกร้า</a>
+                </div>
+                
+            </div>
+            <div class="col-12 col-xl-6" data-aos="fade-left">
+                <div class="row g-4 justify-content-end">
+                    <div class="col-12 col-md-6 d-flex">
+                        <div class="card position-relative overflow-hidden">
+                            <picture class="position-relative z-index-10 d-block bg-light">
+                                <img class="w-100 rounded" src="/images/drive-download-20211118T104030Z-001/Steak_fish02.jpg" alt="HTML Bootstrap Template by Pixel Rocket">
+                            </picture>
+                            <div class="card-overlay">
+                                <p class="lead fw-bolder mb-2">เมนูใหม่</p>
+                                <a href="ลิ้งไปหน้าเมนู./category.html" class="btn btn-psuedo text-white py-2" role="button">เพิ่มลงตระกร้า</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 d-flex">
+                        <div class="card position-relative overflow-hidden">
+                            <picture class="position-relative z-index-10 d-block bg-light">
+                                <img class="w-100 rounded" src="/images/drive-download-20211118T104030Z-001/Steak_chicken02.jpg" alt="HTML Bootstrap Template by Pixel Rocket">
+                            </picture>
+                            <div class="card-overlay">
+                                <p class="lead fw-bolder mb-2">สเต็กไก่</p>
+                                <a href="ลิ้งหน้าเมนู./category.html" class="btn btn-psuedo text-white py-2" role="button">เพิ่มลงตระกร้า</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 d-flex">
+                        <div class="card position-relative overflow-hidden">
+                            <picture class="position-relative z-index-10 d-block bg-light">
+                                <img class="w-100 rounded" src="/images/drive-download-20211118T104030Z-001/Steak_pock02.jpg" alt="HTML Bootstrap Template by Pixel Rocket">
+                            </picture>
+                            <div class="card-overlay">
+                                <p class="lead fw-bolder mb-2">สเต็กหมู</p>
+                                <a href="ลิ้งหน้าเมนู./category.html" class="btn btn-psuedo text-white py-2" role="button">เพิ่มลงตระกร้า</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 d-flex">
+                        <div class="card position-relative overflow-hidden">
+                            <picture class="position-relative z-index-10 d-block bg-light">
+                                <img class="w-100 rounded" src="/images/drive-download-20211118T104030Z-001/Steak_beef04.jpg" alt="HTML Bootstrap Template by Pixel Rocket">
+                            </picture>
+                            <div class="card-overlay">
+                                <p class="lead fw-bolder mb-2">สเต็กเนื้อ</p>
+                                <a href="ลิ้งหน้าเมนู./category.html" class="btn btn-psuedo text-white py-2" role="button">เพิ่มลงตระกร้า</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+  <!-- The Contact Section -->
+  <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
+    <h2 class="w3-wide w3-center">CONTACT</h2>
+    <p class="w3-opacity w3-center"><i>Call? Drop a note!</i></p>
+    <div class="w3-row w3-padding-32">
+      <div class="w3-wide w3-center">
+        <i class="fa fa-map-marker" style="width:30px"></i> Ladkrabang, Bangkok<br>
+        <i class="fa fa-phone" style="width:30px"></i> Phone: 082 2453654<br>
+        <i class="fa fa-envelope" style="width:30px"> </i> Email: Rockwith_U@gmail.com<br>
+      </div>
+    </div>
+  </div>
+  
+<!-- End Page Content -->
+  </div>
+    </div>
+
+<!-- Image of location/map -->
+    <!-- ส่วนของสคริปต์ -->
+    <script>
+        
+        // Automatic Slideshow - change image every 4 seconds
+        var myIndex = 0;
+        carousel();
+        
+        function carousel() {
+          var i;
+          var x = document.getElementsByClassName("mySlides");
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  
+          }
+          myIndex++;
+          if (myIndex > x.length) {myIndex = 1}    
+          x[myIndex-1].style.display = "block";  
+          setTimeout(carousel, 4000);    
+        }
+        
+        // Used to toggle the menu on small screens when clicking on the menu button
+        function myFunction() {
+          var x = document.getElementById("navDemo");
+          if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+          } else { 
+            x.className = x.className.replace(" w3-show", "");
+          }
+        }
+        
+        // When the user clicks anywhere outside of the modal, close it
+        var modal = document.getElementById('ticketModal');
+        window.onclick = function(event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+        </script>
+
+
+
+<!-- Theme JS -->
+<!-- Vendor JS -->
+
+<!-- Core JavaScript
+    ================================================== -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/tether.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/custom.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+<script src="C:/Users/Asus/Downloads/template-main/vendor.bundle.js"></script>
+<!-- Theme JS -->
+<script src="C:/Users/Asus/Downloads/template-main/theme.bundle.js"></script>
+</body>
+</html>
