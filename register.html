@@ -81,7 +81,7 @@
                         
 
                             <li class="nav-item">
-                                <a class="nav-link" id="image-cart" href="#"><i class="fa fa-shopping-cart fa-2x"></i></a>
+                                <a class="nav-link" id="image-cart" href="cartDetails.html"><i class="fa fa-shopping-cart fa-2x"></i></a>
                             </li>
 
                             <li class="nav-item">
@@ -91,17 +91,18 @@
 
                             <li class="nav-item dropdown">
                                 <a  class="nav-link text-light dropdown-toggle"
-                                href="" data-toggle="dropdown">Menu</a>
+                                href="menu.html" data-toggle="dropdown">Menu</a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="#" class="dropdown-item">เครื่องดื่ม</a></li>
-                                    <li><a href="#" class="dropdown-item">เครื่องดื่ม</a></li>
+                                    <li><a href="menu.html" class="dropdown-item">เมนูแนะนำ</a></li>
+                                    <li><a href="menu2.html" class="dropdown-item">สเต็กเนื้อ</a></li>
+                                    <li><a href="menu3.html" class="dropdown-item">สเต็กไก่</a></li>
+                                    <li><a href="menu4.html" class="dropdown-item">สเต็กหมู</a></li>
+                                    <li><a href="menu5.html" class="dropdown-item">สเต็กปลา</a></li>
+                                    <li><a href="menu6.html" class="dropdown-item">เมนูทานเล่น</a></li>
+                                    <li><a href="menu7.html" class="dropdown-item">ไอศกรีม</a></li>
+                                    <li><a href="menu8.html" class="dropdown-item">เครื่องดื่ม</a></li>
                                 </ul>
                             </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link text-light" href="{% url 'signOut' %}">logout<i class="fas fa-sign-out-alt"></i>
-                                </a>
-                              </li>
                       
                               <!-- {% else %} -->
                               <li class="nav-item">
@@ -111,6 +112,11 @@
                       
                               <li class="nav-item">
                                 <a class="nav-link text-light" href="login.html">login<i class="fas fa-sign-in-alt"></i>
+                                </a>
+                              </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link text-light" href="{% url 'signOut' %}">logout<i class="fas fa-sign-out-alt"></i>
                                 </a>
                               </li>
 

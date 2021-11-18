@@ -1,95 +1,103 @@
 <div id="wrapper">
-  <header class="tech-header header">
-      <div class="container-fluid">
-          <nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
-             
-              <!-- ปุ่มย่อ -->
-              <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-              </button>
+    <header class="tech-header header">
+        <div class="container-fluid">
+            <nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
+               
+                <!-- ปุ่มย่อ -->
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-              <!-- กด logo icon = รูปไอคอน -->
-              <a class="navbar-brand" href="tech-index.html"><img src="images/logo.png" alt="" width="85px"></a>
-              <div class="collapse navbar-collapse" id="navbarCollapse">
+                <!-- กด logo icon = รูปไอคอน -->
+                <a class="navbar-brand" href="tech-index.html"><img src="images/logo.png" alt="" width="85px"></a>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
 
-                  <form method="get" action="/search" id="search">
-                      <input name="q" type="text" size="40" placeholder="Search..." />
-                    </form>
-                
-                  <ul class="navbar-nav mr-auto">
+                    <form method="get" action="/search" id="search">
+                        <input name="q" type="text" size="40" placeholder="Search..." />
+                      </form>
+                  
+                    <ul class="navbar-nav mr-auto">
 
-                      <li class="nav-item dropdown">
-                          <!-- {% if request.user.is_authenticated and request.user.first_name %} -->
-                            <a class="nav-link text-light dropdown-toggle" data-toggle="dropdown">
-                              <!-- Welcome, {{ request.user.first_name }} -->
-                              <i class="fas fa-user circle"></i>
+                        <li class="nav-item dropdown">
+                            <!-- {% if request.user.is_authenticated and request.user.first_name %} -->
+                              <a class="nav-link text-light dropdown-toggle" data-toggle="dropdown">
+                                <!-- Welcome, {{ request.user.first_name }} -->
+                                <i class="fas fa-user circle"></i>
+                              </a>
+                              <div class="dropdown-menu">
+                                <a class="dropdown-item" href="{% url 'orderHistory' %}">ประวัติการสั่งซื้อ</a>
+                              </div>
+                            </li>
+                    
+
+                        <li class="nav-item">
+                            <a class="nav-link" id="image-cart" href="cartDetails.html"><i class="fa fa-shopping-cart fa-2x"></i></a>
+                        </li>
+
+                        <li class="nav-item">
+                            <!-- ลิ้งค์ไปอีกเว็บ -->
+                            <a class="nav-link text-light" href="index.html">Home</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a  class="nav-link text-light dropdown-toggle"
+                            href="menu.html" data-toggle="dropdown">Menu</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="menu.html" class="dropdown-item">เมนูแนะนำ</a></li>
+                                <li><a href="menu2.html" class="dropdown-item">สเต็กเนื้อ</a></li>
+                                <li><a href="menu3.html" class="dropdown-item">สเต็กไก่</a></li>
+                                <li><a href="menu4.html" class="dropdown-item">สเต็กหมู</a></li>
+                                <li><a href="menu5.html" class="dropdown-item">สเต็กปลา</a></li>
+                                <li><a href="menu6.html" class="dropdown-item">เมนูทานเล่น</a></li>
+                                <li><a href="menu7.html" class="dropdown-item">ไอศกรีม</a></li>
+                                <li><a href="menu8.html" class="dropdown-item">เครื่องดื่ม</a></li>
+                            </ul>
+                        </li>
+                          <!-- {% else %} -->
+                          <li class="nav-item">
+                            <a class="nav-link text-light" href="register.html">register<i class="fas fa-user-plus"></i>
                             </a>
-                            <div class="dropdown-menu">
-                              <a class="dropdown-item" href="{% url 'orderHistory' %}">ประวัติการสั่งซื้อ</a>
-                            </div>
+                          </li>
+                  
+                          <li class="nav-item">
+                            <a class="nav-link text-light" href="login.html">login<i class="fas fa-sign-in-alt"></i>
+                            </a>
+                          </li>
+
+                          
+
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="{% url 'signOut' %}">logout<i class="fas fa-sign-out-alt"></i>
+                            </a>
                           </li>
                   
 
-                      <li class="nav-item">
-                          <a class="nav-link" id="image-cart" href="#"><i class="fa fa-shopping-cart fa-2x"></i></a>
-                      </li>
-
-                      <li class="nav-item">
-                          <!-- ลิ้งค์ไปอีกเว็บ -->
-                          <a class="nav-link text-light" href="index.html">Home</a>
-                      </li>
-
-                      <li class="nav-item dropdown">
-                          <a  class="nav-link text-light dropdown-toggle"
-                          href="" data-toggle="dropdown">Menu</a>
-                          <ul class="dropdown-menu">
-                              <li><a href="#" class="dropdown-item">เครื่องดื่ม</a></li>
-                              <li><a href="#" class="dropdown-item">เครื่องดื่ม</a></li>
-                          </ul>
-                      </li>
-
-                      <li class="nav-item">
-                          <a class="nav-link text-light" href="{% url 'signOut' %}">logout<i class="fas fa-sign-out-alt"></i>
-                          </a>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Contact Us</a>
                         </li>
-                
-                        <!-- {% else %} -->
-                        <li class="nav-item">
-                          <a class="nav-link text-light" href="register.html">register<i class="fas fa-user-plus"></i>
-                          </a>
-                        </li>
-                
-                        <li class="nav-item">
-                          <a class="nav-link text-light" href="login.html">login<i class="fas fa-sign-in-alt"></i>
-                          </a>
-                        </li>
+                        
+                    </ul>
 
-                        <li class="nav-item">
-                          <a class="nav-link" href="#">Contact Us</a>
-                      </li>
-                      
-                  </ul>
+                    <!-- รูปcontract -->
+                    <ul class="navbar-nav mr-2">
+                        <!-- wifi icon -->
+                        <!-- <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa fa-rss"></i></a>
+                        </li> -->
+                        <!-- andriod icon -->
+                        <!-- <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa fa-android"></i></a>
+                        </li> -->
 
-                  <!-- รูปcontract -->
-                  <ul class="navbar-nav mr-2">
-                      <!-- wifi icon -->
-                      <!-- <li class="nav-item">
-                          <a class="nav-link" href="#"><i class="fa fa-rss"></i></a>
-                      </li> -->
-                      <!-- andriod icon -->
-                      <!-- <li class="nav-item">
-                          <a class="nav-link" href="#"><i class="fa fa-android"></i></a>
-                      </li> -->
+                        <!-- apple icon -->
+                        <!-- <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa fa-apple"></i></a>
+                        </li> -->
 
-                      <!-- apple icon -->
-                      <!-- <li class="nav-item">
-                          <a class="nav-link" href="#"><i class="fa fa-apple"></i></a>
-                      </li> -->
-
-                  </ul>
-                  
-              </div>
-          </nav>
-      </div><!-- end container-fluid -->
-  </header><!-- end market-header -->
+                    </ul>
+                    
+                </div>
+            </nav>
+        </div><!-- end container-fluid -->
+    </header><!-- end market-header -->
 </div>
