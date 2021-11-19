@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- Site Metas -->
+    <title>Ecommerce</title>    
+
+    <!-- ================================ header ========================================================= -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet"> 
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- FontAwesome Icons core CSS -->
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <!-- Responsive styles for this template -->
+    <link href="css/responsive.css" rel="stylesheet">
+    <!-- Colors for this template -->
+    <link href="css/colors.css" rel="stylesheet">
+    <!-- Version Tech CSS for this template -->
+    <link href="css/TopHeader.css" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/search1.css"> 
+    
+    <!-- ================================ footer ========================================================= -->
+    <!-- Required meta tags -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="css/styleFooter.css">
+   
+    <!-- ================================= contant ====================================== -->4 <!-- MATERIAL DESIGN ICONIC FONT -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+    <style>
+    body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
+    .w3-bar-block .w3-bar-item {padding:20px}
+    </style>
+</head>
+
+<body>
+        <!-- ================= header ============================ -->
+    <div id="wrapper">
+        <header class="tech-header header">
+            <div class="container-fluid">
+                <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
+                   
+                    <!-- ปุ่มย่อ -->
+                    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <!-- กด logo icon = รูปไอคอน -->
+                    <a class="navbar-brand" href="home.html"><img src="images/logo.png" alt="" width="85px"></a>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+
+                        <form method="get" action="/search" id="search">
+                            <input name="q" type="text" size="40" placeholder="Search..." />
+                          </form>
+                      
+                        <ul class="navbar-nav mr-auto">
+
+                            <li class="nav-item dropdown">
+                                <!-- {% if request.user.is_authenticated and request.user.first_name %} -->
+                                  <a class="nav-link text-light dropdown-toggle" data-toggle="dropdown">
+                                    <!-- Welcome, {{ request.user.first_name }} -->
+                                    <i class="fas fa-user circle"></i>
+                                  </a>
+                                  <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="orderHistory.html">ประวัติการสั่งซื้อ</a>
+                                  </div>
+                                </li>
+                        
+
+                            <li class="nav-item">
+                                <a class="nav-link" id="image-cart" href="cartDetails.html"><i class="fa fa-shopping-cart fa-2x"></i></a>
+                            </li>
+
+                            <li class="nav-item">
+                                <!-- ลิ้งค์ไปอีกเว็บ -->
+                                <a class="nav-link text-light" href="home.html">Home</a>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a  class="nav-link text-light dropdown-toggle"
+                                href="" data-toggle="dropdown">Menu</a>
+                                <ul class="dropdown-menu">
+                                  <li><a href="menu.html" class="dropdown-item">เมนูแนะนำ</a></li>
+                                  <li><a href="menu2.html" class="dropdown-item">สเต็กเนื้อ</a></li>
+                                  <li><a href="menu3.html" class="dropdown-item">สเต็กไก่</a></li>
+                                  <li><a href="menu4.html" class="dropdown-item">สเต็กหมู</a></li>
+                                  <li><a href="menu5.html" class="dropdown-item">สเต็กปลา</a></li>
+                                  <li><a href="menu6.html" class="dropdown-item">เมนูทานเล่น</a></li>
+                                  <li><a href="menu7.html" class="dropdown-item">ไอศกรีม</a></li>
+                                  <li><a href="menu8.html" class="dropdown-item">เครื่องดื่ม</a></li>
+                                </ul>
+                            </li>
+
+                              <!-- {% else %} -->
+                              <li class="nav-item">
+                                <a class="nav-link text-light" href="register.html">register<i class="fas fa-user-plus"></i>
+                                </a>
+                              </li>
+                      
+                              <li class="nav-item">
+                                <a class="nav-link text-light" href="login.html">login<i class="fas fa-sign-in-alt"></i>
+                                </a>
+                              </li>
+
+                              
+                            <li class="nav-item">
+                              <a class="nav-link text-light" href="{% url 'signOut' %}">logout<i class="fas fa-sign-out-alt"></i>
+                              </a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </nav>
+            </div><!-- end container-fluid -->
+        </header><!-- end market-header -->
+    </div>
+
+        <!-- ================= เนื้อหา ============================ -->
+        <div class = "container">
+          {% block content %}
+          <section>
+              <div class="jumbotron my-4">
+                  <h1 class="display-4">Thank You!</h1>
+                  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+                  <hr class="my-4">
+                  <p>ดำเนินการชำระเงินเรียบร้อย ลูกค้าสามารถรอรับสินค้าที่บ้านได้เลย</p>
+                  <p class="lead">
+                    <a class="btn btn-dark btn-lg" href="index.html" role="button">ซื้อสินค้าเพิ่มเติม</a>
+                  </p>
+              </div>
+          </section>
+          {% endblock %}
+      </div>
+    <!-- ================= footer ============================ -->
+    
+    <footer class="footer-32892 pb-0">
+        <div class="site-section">
+          <div class="container">
+  
+            
+            <div class="row">
+  
+              <div class="col-md pr-md-5 mb-4 mb-md-0">
+                <h3>Contract Us</h3>
+                <ul class="list-unstyled quick-info mb-4">
+                  <li ><a href="#" class="d-flex align-items-center"><span class="icon mr-3 icon-phone"></span>Phine No. : 03x-xxx-xx17</a></li>
+                  <li ><a href="#" class="d-flex align-items-center"><span class="icon mr-3 icon-envelope"></span>line : @RockWithU</a></li>
+                </ul>
+              </div>
+      
+  
+  
+              <div class="col-md mb-4 mb-md-0">
+                <h3>Map</h3>
+                <div class="">
+                  <div class="Map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.820486948721!2d100.77404805088749!3d13.729315665126563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6ef572c9e67161d5!2zMTPCsDQzJzQzLjgiTiAxMDDCsDQ2JzMwLjkiRQ!5e0!3m2!1sen!2sth!4v1637289196037!5m2!1sen!2sth" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                  </div>
+                </div>
+              </div>      
+            </div>
+          </div>
+        </div>
+    </footer>
+
+      <!-- Core JavaScript  -->
+    <!-- ================= script header ============================ -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/tether.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/custom.js"></script>
+
+    <!-- ================= script footer ============================ -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+      <script src="js/popper.min.js"></script>
+
+    <!-- ================= script เนื้อหา ============================ -->
+    
+</body>
+</html>
