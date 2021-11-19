@@ -160,7 +160,8 @@ button.Register-btn {
   align-items: center;
   justify-content: center;
   padding: 0;
-  background: #57b846;
+  background: #e42029;
+  font:bolder;
   font-size: 13px;
   color: #fff;
   text-transform: uppercase;
@@ -172,7 +173,9 @@ button.Register-btn {
   transition-property: color;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s; }
+
   button.Register-btn::before {
+   
     content: "";
     position: absolute;
     z-index: -1;
@@ -180,7 +183,9 @@ button.Register-btn {
     bottom: 0;
     left: 0;
     right: 0;
-    background: #43a731;
+    font:bolder;
+    background: #ffeb3b;
+    
     -webkit-transform: scaleX(0);
     transform: scaleX(0);
     -webkit-transform-origin: 50%;
@@ -191,9 +196,16 @@ button.Register-btn {
     transition-duration: 0.3s;
     -webkit-transition-timing-function: ease-out;
     transition-timing-function: ease-out; }
+
   button.Register-btn:hover::before, button.Register-btn:active::before, button.Register-btn:focus::before {
     -webkit-transform: scaleX(1);
     transform: scaleX(1); }
+
+    button.Register-btn:hover{
+      font:bolder;
+      color: rgb(252, 110, 27);
+    }
+  
 
 .form-end {
   display: flex;

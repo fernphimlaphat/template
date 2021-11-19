@@ -60,7 +60,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
                 </button>
 
                 <!-- กด logo icon = รูปไอคอน -->
-                <a class="navbar-brand" href="tech-index.html"><img src="images/logo.png" alt="" width="85px"></a>
+                <a class="navbar-brand" href="home.html"><img src="images/logo.png" alt="" width="85px"></a>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
 
                     <form method="get" action="/search" id="search">
@@ -76,7 +76,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
                                 <i class="fas fa-user circle"></i>
                               </a>
                               <div class="dropdown-menu">
-                                <a class="dropdown-item" href="{% url 'orderHistory' %}">ประวัติการสั่งซื้อ</a>
+                                <a class="dropdown-item" href="orderHistory.html">ประวัติการสั่งซื้อ</a>
                               </div>
                             </li>
                     
@@ -87,7 +87,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
 
                         <li class="nav-item">
                             <!-- ลิ้งค์ไปอีกเว็บ -->
-                            <a class="nav-link text-light" href="index.html">Home</a>
+                            <a class="nav-link text-light" href="home.html">Home</a>
                         </li>
 
                         <li class="nav-item dropdown">
@@ -122,11 +122,6 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
                             <a class="nav-link text-light" href="{% url 'signOut' %}">logout<i class="fas fa-sign-out-alt"></i>
                             </a>
                           </li>
-
-                          <li class="nav-item">
-                            <a class="nav-link" href="#">Contact Us</a>
-                        </li>
-                        
                     </ul>
 
                     <!-- รูปcontract -->
