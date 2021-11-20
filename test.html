@@ -26,7 +26,9 @@
     <link href="css/colors.css" rel="stylesheet">
     <!-- Version Tech CSS for this template -->
     <link href="css/TopHeader.css" rel="stylesheet"> 
-    <link rel="stylesheet" href="css/search1.css"> 
+    <link rel="stylesheet" href="css/search1.css">
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"> 
     
     <!-- ================================ footer ========================================================= -->
     <!-- Required meta tags -->
@@ -37,7 +39,7 @@
     <!-- Style CSS -->
     <link rel="stylesheet" href="css/styleFooter.css">
    
-    <!-- ================================= contant ====================================== -->4 <!-- MATERIAL DESIGN ICONIC FONT -->
+    <!-- ================================= contant ====================================== -->
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
     <style>
@@ -62,11 +64,19 @@
                     <a class="navbar-brand" href="home.html"><img src="images/logo.png" alt="" width="85px"></a>
                     <div class="collapse navbar-collapse" id="navbarCollapse">
 
-                        <form method="get" action="/search" id="search">
-                            <input name="q" type="text" size="40" placeholder="Search..." />
-                          </form>
-                      
                         <ul class="navbar-nav mr-auto">
+                            
+                        <div class="search-box">
+                            <input type="text" placeholder="Type to search..">
+                            <div class="search-icon">
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <div class="cancel-icon">
+                                <i class="fas fa-times"></i>
+                            </div>
+                            <div class="search-data">
+                            </div>
+                        </div>
 
                             <li class="nav-item dropdown">
                                 <!-- {% if request.user.is_authenticated and request.user.first_name %} -->
@@ -129,21 +139,18 @@
     </div>
 
         <!-- ================= เนื้อหา ============================ -->
-        <div class = "container">
-          {% block content %}
-          <section>
-              <div class="jumbotron my-4">
-                  <h1 class="display-4">Thank You!</h1>
-                  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-                  <hr class="my-4">
-                  <p>ดำเนินการชำระเงินเรียบร้อย ลูกค้าสามารถรอรับสินค้าที่บ้านได้เลย</p>
-                  <p class="lead">
-                    <a class="btn btn-dark btn-lg" href="index.html" role="button">ซื้อสินค้าเพิ่มเติม</a>
-                  </p>
-              </div>
-          </section>
-          {% endblock %}
-      </div>
+        <div class="container">
+          <div class="jumbotron my-4">
+              <h1 class="display-4">Thank You!</h1>
+              <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+              <hr class="my-4">
+              <p>ดำเนินการชำระเงินเรียบร้อย ลูกค้าสามารถรอรับสินค้าที่บ้านได้เลย</p>
+              <p class="lead">
+                <a class="w3-bar-item w3-button w3-yellow w3-hover-deep-orange w3-hover-shadow w3-hover-text-white" href="home.html" role="button">ซื้อสินค้าเพิ่มเติม</a>
+              </p>
+          </div>
+        </div>
+
     <!-- ================= footer ============================ -->
     
     <footer class="footer-32892 pb-0">
@@ -182,6 +189,35 @@
     <script src="js/tether.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/custom.js"></script>
+    <script>
+        const searchBox = document.querySelector(".search-box");
+const searchBtn = document.querySelector(".search-icon");
+const cancelBtn = document.querySelector(".cancel-icon");
+const searchInput = document.querySelector("input");
+const searchData = document.querySelector(".search-data");
+searchBtn.onclick =()=>{
+searchBox.classList.add("active");
+searchBtn.classList.add("active");
+searchInput.classList.add("active");
+cancelBtn.classList.add("active");
+searchInput.focus();
+if(searchInput.value != ""){
+var values = searchInput.value;
+searchData.classList.remove("active");
+searchData.innerHTML = "You just typed " + "<span style='font-weight: 500;'>" + values + "</span>";
+}else{
+searchData.textContent = "";
+}
+}
+cancelBtn.onclick =()=>{
+searchBox.classList.remove("active");
+searchBtn.classList.remove("active");
+searchInput.classList.remove("active");
+cancelBtn.classList.remove("active");
+searchData.classList.toggle("active");
+searchInput.value = "";
+}
+    </script>
 
     <!-- ================= script footer ============================ -->
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -189,6 +225,16 @@
       <script src="js/popper.min.js"></script>
 
     <!-- ================= script เนื้อหา ============================ -->
-    
+    <script>
+      // Script to open and close sidebar
+      function w3_open() {
+        document.getElementById("mySidebar").style.display = "block";
+      }
+       
+      function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+      }
+    </script>
+
 </body>
 </html>

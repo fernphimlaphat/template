@@ -26,7 +26,9 @@
     <link href="css/colors.css" rel="stylesheet">
     <!-- Version Tech CSS for this template -->
     <link href="css/TopHeader.css" rel="stylesheet"> 
-    <link rel="stylesheet" href="css/search1.css"> 
+    <link rel="stylesheet" href="css/search1.css">
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"> 
     
     <!-- ================================ footer ========================================================= -->
     <!-- Required meta tags -->
@@ -47,8 +49,6 @@
     body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
     .w3-bar-block .w3-bar-item {padding:20px}
     </style>
-
-
 </head>
 
 <body>
@@ -67,11 +67,19 @@
                     <a class="navbar-brand" href="home.html"><img src="images/logo.png" alt="" width="85px"></a>
                     <div class="collapse navbar-collapse" id="navbarCollapse">
 
-                        <form method="get" action="/search" id="search">
-                            <input name="q" type="text" size="40" placeholder="Search..." />
-                          </form>
-                      
                         <ul class="navbar-nav mr-auto">
+                            
+                        <div class="search-box">
+                            <input type="text" placeholder="Type to search..">
+                            <div class="search-icon">
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <div class="cancel-icon">
+                                <i class="fas fa-times"></i>
+                            </div>
+                            <div class="search-data">
+                            </div>
+                        </div>
 
                             <li class="nav-item dropdown">
                                 <!-- {% if request.user.is_authenticated and request.user.first_name %} -->
@@ -134,99 +142,101 @@
     </div>
 
         <!-- ================= เนื้อหา ============================ -->
-    <div class="w3-content" style="max-width:2000px;margin-top:50px">
+        <div class="w3-content" style="max-width:2000px;margin-top:50px">
 
-        <!-- Automatic Slideshow Images -->
-        <div class="mySlides w3-display-container w3-center">
-        <img src="images/cover1.jpg" style="width:100%">
-        
-        </div>
-        <div class="mySlides w3-display-container w3-center">
-        <img src="images/cover2.jpg" style="width:100%">
-        
-        </div>
-        <div class="mySlides w3-display-container w3-center">
-        <img src="images/BG_real.jpg" style="width:100%">
-        
-        </div>
-    </div>
-    <section>
+          <!-- Automatic Slideshow Images -->
+          <div class="mySlides w3-display-container w3-center">
+          <img src="images/cover1.jpg" style="width:100%">
+          
+          </div>
+          <div class="mySlides w3-display-container w3-center">
+          <img src="images/cover2.jpg" style="width:100%">
+          
+          </div>
+          <div class="mySlides w3-display-container w3-center">
+          <img src="images/BG_real.jpg" style="width:100%">
+          
+          </div>
+      </div>
 
- <!-- The Band Section -->
- <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
-    <h2 class="w3-wide">"Promotion"</h2>
-    <p class="w3-opacity"><i>เฉพาะเดือนนี้เท่านั้น</i></p>
-    <p class="w3-justify"> สำหรับลูกค้าที่เพิ่งสมัครสมาชิกกับทางร้านเรา รับชุดเฟรนฟรายสุดคุ้ม ราคา 69 บาท (---ฟรี---) ไม่จำกัดยอดการสั่งซื้อ</p>
-    <div class="w3-row w3-padding-32">
-    
-</div>
-
-<div class="pt-7 mb-5 mb-lg-10">
-    <div class="row g-4">
-        <div class="col-12 col-xl-6 position-relative" data-aos="fade-right">
-            <picture class="position-relative z-index-10">
-                <img class="w-100 rounded" src="/images/drive-download-20211118T104030Z-001/gangster04.jpg" alt="HTML Bootstrap Template by Pixel Rocket">
-            </picture>
-            <div class="card-overlay">
-                <p class="lead fw-bolder mb-2">เมนูแนะนำ</p>
-                <a href="./category.html" class="w3-bar-item w3-button w3-hover-yellow" role="button">เพิ่มลงตระกร้า</a>
-            </div>
-            
-        </div>
-        <div class="col-12 col-xl-6" data-aos="fade-left">
-            <div class="row g-4 justify-content-end">
-                <div class="col-12 col-md-6 d-flex">
-                    <div class="card position-relative overflow-hidden">
-                        <picture class="position-relative z-index-10 d-block bg-light">
-                            <img class="w-100 rounded" src="/images/drive-download-20211118T104030Z-001/Steak_fish02.jpg" alt="HTML Bootstrap Template by Pixel Rocket">
-                        </picture>
-                        <div class="card-overlay">
-                            <p class="lead fw-bolder mb-2">เมนูใหม่</p>
-                            <a href="ลิ้งไปหน้าเมนู./category.html" class="w3-bar-item w3-button w3-hover-yellow" role="button">เพิ่มลงตระกร้า</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 d-flex">
-                    <div class="card position-relative overflow-hidden">
-                        <picture class="position-relative z-index-10 d-block bg-light">
-                            <img class="w-100 rounded" src="/images/drive-download-20211118T104030Z-001/Steak_chicken02.jpg" alt="HTML Bootstrap Template by Pixel Rocket">
-                        </picture>
-                        <div class="card-overlay">
-                            <p class="lead fw-bolder mb-2">สเต็กไก่</p>
-                            <a href="ลิ้งหน้าเมนู./category.html" class="w3-bar-item w3-button w3-hover-yellow" role="button">เพิ่มลงตระกร้า</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 d-flex">
-                    <div class="card position-relative overflow-hidden">
-                        <picture class="position-relative z-index-10 d-block bg-light">
-                            <img class="w-100 rounded" src="/images/drive-download-20211118T104030Z-001/Steak_pock02.jpg" alt="HTML Bootstrap Template by Pixel Rocket">
-                        </picture>
-                        <div class="card-overlay">
-                            <p class="lead fw-bolder mb-2">สเต็กหมู</p>
-                            <a href="ลิ้งหน้าเมนู./category.html" class="w3-bar-item w3-button w3-hover-yellow" role="button">เพิ่มลงตระกร้า</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 d-flex">
-                    <div class="card position-relative overflow-hidden">
-                        <picture class="position-relative z-index-10 d-block bg-light">
-                            <img class="w-100 rounded" src="/images/drive-download-20211118T104030Z-001/Steak_beef04.jpg" alt="HTML Bootstrap Template by Pixel Rocket">
-                        </picture>
-                        <div class="card-overlay">
-                            <p class="lead fw-bolder mb-2">สเต็กเนื้อ</p>
-                            <a href="ลิ้งหน้าเมนู./category.html" class="w3-bar-item w3-button w3-hover-yellow" role="button">เพิ่มลงตระกร้า</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-    </section>
-   
+      <section>
+  
+   <!-- The Band Section -->
+   <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+      <h2 class="w3-wide">"Promotion"</h2>
+      <p class="w3-opacity"><i>เฉพาะเดือนนี้เท่านั้น</i></p>
+      <p class="w3-justify"> สำหรับลูกค้าที่เพิ่งสมัครสมาชิกกับทางร้านเรา รับชุดเฟรนฟรายสุดคุ้ม ราคา 69 บาท (---ฟรี---) ไม่จำกัดยอดการสั่งซื้อ</p>
+      <div class="w3-row w3-padding-32">
+      
+  </div>
+  
+  <div class="pt-7 mb-5 mb-lg-10">
+      <div class="row g-4">
+          <div class="col-12 col-xl-6 position-relative" data-aos="fade-right">
+              <picture class="position-relative z-index-10">
+                  <img class="w-100 rounded" src="/images/drive-download-20211118T104030Z-001/gangster04.jpg" alt="HTML Bootstrap Template by Pixel Rocket">
+              </picture>
+              <div class="card-overlay">
+                  <p class="lead fw-bolder mb-2">เมนูแนะนำ</p>
+                  <a href="./category.html" class="w3-bar-item w3-button w3-hover-yellow" role="button">เพิ่มลงตระกร้า</a>
+              </div>
+              
+          </div>
+          <div class="col-12 col-xl-6" data-aos="fade-left">
+              <div class="row g-4 justify-content-end">
+                  <div class="col-12 col-md-6 d-flex">
+                      <div class="card position-relative overflow-hidden">
+                          <picture class="position-relative z-index-10 d-block bg-light">
+                              <img class="w-100 rounded" src="/images/drive-download-20211118T104030Z-001/Steak_fish02.jpg" alt="HTML Bootstrap Template by Pixel Rocket">
+                          </picture>
+                          <div class="card-overlay">
+                              <p class="lead fw-bolder mb-2">เมนูใหม่</p>
+                              <a href="ลิ้งไปหน้าเมนู./category.html" class="w3-bar-item w3-button w3-hover-yellow" role="button">เพิ่มลงตระกร้า</a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-12 col-md-6 d-flex">
+                      <div class="card position-relative overflow-hidden">
+                          <picture class="position-relative z-index-10 d-block bg-light">
+                              <img class="w-100 rounded" src="/images/drive-download-20211118T104030Z-001/Steak_chicken02.jpg" alt="HTML Bootstrap Template by Pixel Rocket">
+                          </picture>
+                          <div class="card-overlay">
+                              <p class="lead fw-bolder mb-2">สเต็กไก่</p>
+                              <a href="ลิ้งหน้าเมนู./category.html" class="w3-bar-item w3-button w3-hover-yellow" role="button">เพิ่มลงตระกร้า</a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-12 col-md-6 d-flex">
+                      <div class="card position-relative overflow-hidden">
+                          <picture class="position-relative z-index-10 d-block bg-light">
+                              <img class="w-100 rounded" src="/images/drive-download-20211118T104030Z-001/Steak_pock02.jpg" alt="HTML Bootstrap Template by Pixel Rocket">
+                          </picture>
+                          <div class="card-overlay">
+                              <p class="lead fw-bolder mb-2">สเต็กหมู</p>
+                              <a href="ลิ้งหน้าเมนู./category.html" class="w3-bar-item w3-button w3-hover-yellow" role="button">เพิ่มลงตระกร้า</a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-12 col-md-6 d-flex">
+                      <div class="card position-relative overflow-hidden">
+                          <picture class="position-relative z-index-10 d-block bg-light">
+                              <img class="w-100 rounded" src="/images/drive-download-20211118T104030Z-001/Steak_beef04.jpg" alt="HTML Bootstrap Template by Pixel Rocket">
+                          </picture>
+                          <div class="card-overlay">
+                              <p class="lead fw-bolder mb-2">สเต็กเนื้อ</p>
+                              <a href="ลิ้งหน้าเมนู./category.html" class="w3-bar-item w3-button w3-hover-yellow" role="button">เพิ่มลงตระกร้า</a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  
+      </section>
+     
     <!-- ================= footer ============================ -->
+    
     <footer class="footer-32892 pb-0">
         <div class="site-section">
           <div class="container">
@@ -255,7 +265,7 @@
             </div>
           </div>
         </div>
-      </footer>
+    </footer>
 
       <!-- Core JavaScript  -->
     <!-- ================= script header ============================ -->
@@ -263,6 +273,35 @@
     <script src="js/tether.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/custom.js"></script>
+    <script>
+        const searchBox = document.querySelector(".search-box");
+const searchBtn = document.querySelector(".search-icon");
+const cancelBtn = document.querySelector(".cancel-icon");
+const searchInput = document.querySelector("input");
+const searchData = document.querySelector(".search-data");
+searchBtn.onclick =()=>{
+searchBox.classList.add("active");
+searchBtn.classList.add("active");
+searchInput.classList.add("active");
+cancelBtn.classList.add("active");
+searchInput.focus();
+if(searchInput.value != ""){
+var values = searchInput.value;
+searchData.classList.remove("active");
+searchData.innerHTML = "You just typed " + "<span style='font-weight: 500;'>" + values + "</span>";
+}else{
+searchData.textContent = "";
+}
+}
+cancelBtn.onclick =()=>{
+searchBox.classList.remove("active");
+searchBtn.classList.remove("active");
+searchInput.classList.remove("active");
+cancelBtn.classList.remove("active");
+searchData.classList.toggle("active");
+searchInput.value = "";
+}
+    </script>
 
     <!-- ================= script footer ============================ -->
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -272,40 +311,40 @@
     <!-- ================= script เนื้อหา ============================ -->
     <script>
         
-    // Automatic Slideshow - change image every 4 seconds
-    var myIndex = 0;
-    carousel();
-    
-    function carousel() {
-      var i;
-      var x = document.getElementsByClassName("mySlides");
-      for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";  
+      // Automatic Slideshow - change image every 4 seconds
+      var myIndex = 0;
+      carousel();
+      
+      function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";  
+        }
+        myIndex++;
+        if (myIndex > x.length) {myIndex = 1}    
+        x[myIndex-1].style.display = "block";  
+        setTimeout(carousel, 4000);    
       }
-      myIndex++;
-      if (myIndex > x.length) {myIndex = 1}    
-      x[myIndex-1].style.display = "block";  
-      setTimeout(carousel, 4000);    
-    }
-    
-    // Used to toggle the menu on small screens when clicking on the menu button
-    function myFunction() {
-      var x = document.getElementById("navDemo");
-      if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-      } else { 
-        x.className = x.className.replace(" w3-show", "");
+      
+      // Used to toggle the menu on small screens when clicking on the menu button
+      function myFunction() {
+        var x = document.getElementById("navDemo");
+        if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+        } else { 
+          x.className = x.className.replace(" w3-show", "");
+        }
       }
-    }
-    
-    // When the user clicks anywhere outside of the modal, close it
-    var modal = document.getElementById('ticketModal');
-    window.onclick = function(event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
+      
+      // When the user clicks anywhere outside of the modal, close it
+      var modal = document.getElementById('ticketModal');
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
       }
-    }
-    </script>
+      </script>
 
 </body>
 </html>

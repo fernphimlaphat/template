@@ -26,7 +26,9 @@
     <link href="css/colors.css" rel="stylesheet">
     <!-- Version Tech CSS for this template -->
     <link href="css/TopHeader.css" rel="stylesheet"> 
-    <link rel="stylesheet" href="css/search1.css"> 
+    <link rel="stylesheet" href="css/search1.css">
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"> 
     
     <!-- ================================ footer ========================================================= -->
     <!-- Required meta tags -->
@@ -63,11 +65,19 @@
                     <a class="navbar-brand" href="home.html"><img src="images/logo.png" alt="" width="85px"></a>
                     <div class="collapse navbar-collapse" id="navbarCollapse">
 
-                        <form method="get" action="/search" id="search">
-                            <input name="q" type="text" size="40" placeholder="Search..." />
-                          </form>
-                      
                         <ul class="navbar-nav mr-auto">
+                            
+                        <div class="search-box">
+                            <input type="text" placeholder="Type to search..">
+                            <div class="search-icon">
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <div class="cancel-icon">
+                                <i class="fas fa-times"></i>
+                            </div>
+                            <div class="search-data">
+                            </div>
+                        </div>
 
                             <li class="nav-item dropdown">
                                 <!-- {% if request.user.is_authenticated and request.user.first_name %} -->
@@ -130,84 +140,83 @@
     </div>
 
         <!-- ================= เนื้อหา ============================ -->
-     
         <div class = "container">
-            {% block content %}
-            <section>
-                     <!-- Main Container  -->
-            <div class="main-container container">
-    
-                <div class="row">
-                    <!--Middle Part Start-->
-                    <div id="content" class="col-sm-9">
-                        <h2 class="title">Order History</h2>
-                        <div class="table-responsive">
-                            <table class="table table-bordered table-hover">
-                                <thead>
-                                    <tr>
-                                        <td class="text-center">Image</td>
-                                        <td class="text-left">Product Name</td>
-                                        <td class="text-center">Order ID</td>
-                                        <td class="text-center">Qty</td>
-                                        <td class="text-center">Status</td>
-                                        <td class="text-center">Date Added</td>
-                                        <td class="text-right">Total</td>
-                                        <td></td>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="text-center">
-                                            <a href="product.html"><img width="85" class="img-thumbnail"
-                                                    title="Aspire Ultrabook Laptop" alt="Aspire Ultrabook Laptop"
-                                                    src="image/catalog/demo/product/funiture/1.jpg">
-                                            </a>
-                                        </td>
-                                        <td class="text-left"><a href="product.html">Aspire Ultrabook Laptop</a>
-                                        </td>
-                                        <td class="text-center">#214521</td>
-                                        <td class="text-center">1</td>
-                                        <td class="text-center">Shipped</td>
-                                        <td class="text-center">21/06/2016</td>
-                                        <td class="text-right">$228.00</td>
-                                        <td class="text-center"><a class="Yellow" title="" data-toggle="tooltip"
-                                                href="order-information.html" data-original-title="View"><i
-                                                    class="fa fa-eye"></i></a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-center">
-                                            <a href="product.html"><img width="85" class="img-thumbnail"
-                                                    title="Xitefun Causal Wear Fancy Shoes"
-                                                    alt="Xitefun Causal Wear Fancy Shoes"
-                                                    src="image/catalog/demo/product/funiture/4.jpg">
-                                            </a>
-                                        </td>
-                                        <td class="text-left"><a href="product.html">Xitefun Causal Wear Fancy Shoes</a>
-                                        </td>
-                                        <td class="text-center">#1565245</td>
-                                        <td class="text-center">1</td>
-                                        <td class="text-center">Shipped</td>
-                                        <td class="text-center">20/06/2016</td>
-                                        <td class="text-right">$133.20</td>
-                                        <td class="text-center"><a class="Yellow" title="" data-toggle="tooltip"
-                                                href="order-information.html" data-original-title="View"><i
-                                                    class="fa fa-eye"></i></a>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-    
-                    </div>
-                 
-                </div>
-            </div>
-            <!-- //Main Container -->
-            </section>
-            {% endblock %}
-        </div>
-    
+          {% block content %}
+          <section>
+                   <!-- Main Container  -->
+          <div class="main-container container">
+  
+              <div class="row">
+                  <!--Middle Part Start-->
+                  <div id="content" class="col-sm-9">
+                      <h2 class="title">Order History</h2>
+                      <div class="table-responsive">
+                          <table class="table table-bordered table-hover">
+                              <thead>
+                                  <tr>
+                                      <td class="text-center">Image</td>
+                                      <td class="text-left">Product Name</td>
+                                      <td class="text-center">Order ID</td>
+                                      <td class="text-center">Qty</td>
+                                      <td class="text-center">Status</td>
+                                      <td class="text-center">Date Added</td>
+                                      <td class="text-right">Total</td>
+                                      <td></td>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                                  <tr>
+                                      <td class="text-center">
+                                          <a href="product.html"><img width="85" class="img-thumbnail"
+                                                  title="Aspire Ultrabook Laptop" alt="Aspire Ultrabook Laptop"
+                                                  src="image/catalog/demo/product/funiture/1.jpg">
+                                          </a>
+                                      </td>
+                                      <td class="text-left"><a href="product.html">Aspire Ultrabook Laptop</a>
+                                      </td>
+                                      <td class="text-center">#214521</td>
+                                      <td class="text-center">1</td>
+                                      <td class="text-center">Shipped</td>
+                                      <td class="text-center">21/06/2016</td>
+                                      <td class="text-right">$228.00</td>
+                                      <td class="text-center"><a class="Yellow" title="" data-toggle="tooltip"
+                                              href="order-information.html" data-original-title="View"><i
+                                                  class="fa fa-eye"></i></a>
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td class="text-center">
+                                          <a href="product.html"><img width="85" class="img-thumbnail"
+                                                  title="Xitefun Causal Wear Fancy Shoes"
+                                                  alt="Xitefun Causal Wear Fancy Shoes"
+                                                  src="image/catalog/demo/product/funiture/4.jpg">
+                                          </a>
+                                      </td>
+                                      <td class="text-left"><a href="product.html">Xitefun Causal Wear Fancy Shoes</a>
+                                      </td>
+                                      <td class="text-center">#1565245</td>
+                                      <td class="text-center">1</td>
+                                      <td class="text-center">Shipped</td>
+                                      <td class="text-center">20/06/2016</td>
+                                      <td class="text-right">$133.20</td>
+                                      <td class="text-center"><a class="Yellow" title="" data-toggle="tooltip"
+                                              href="order-information.html" data-original-title="View"><i
+                                                  class="fa fa-eye"></i></a>
+                                      </td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                      </div>
+  
+                  </div>
+               
+              </div>
+          </div>
+          <!-- //Main Container -->
+          </section>
+          {% endblock %}
+      </div>
+  
 
     <!-- ================= footer ============================ -->
     
@@ -247,6 +256,35 @@
     <script src="js/tether.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/custom.js"></script>
+    <script>
+        const searchBox = document.querySelector(".search-box");
+const searchBtn = document.querySelector(".search-icon");
+const cancelBtn = document.querySelector(".cancel-icon");
+const searchInput = document.querySelector("input");
+const searchData = document.querySelector(".search-data");
+searchBtn.onclick =()=>{
+searchBox.classList.add("active");
+searchBtn.classList.add("active");
+searchInput.classList.add("active");
+cancelBtn.classList.add("active");
+searchInput.focus();
+if(searchInput.value != ""){
+var values = searchInput.value;
+searchData.classList.remove("active");
+searchData.innerHTML = "You just typed " + "<span style='font-weight: 500;'>" + values + "</span>";
+}else{
+searchData.textContent = "";
+}
+}
+cancelBtn.onclick =()=>{
+searchBox.classList.remove("active");
+searchBtn.classList.remove("active");
+searchInput.classList.remove("active");
+cancelBtn.classList.remove("active");
+searchData.classList.toggle("active");
+searchInput.value = "";
+}
+    </script>
 
     <!-- ================= script footer ============================ -->
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -254,6 +292,16 @@
       <script src="js/popper.min.js"></script>
 
     <!-- ================= script เนื้อหา ============================ -->
-    
+    <script>
+      // Script to open and close sidebar
+      function w3_open() {
+        document.getElementById("mySidebar").style.display = "block";
+      }
+       
+      function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+      }
+    </script>
+
 </body>
 </html>

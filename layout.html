@@ -26,7 +26,9 @@
     <link href="css/colors.css" rel="stylesheet">
     <!-- Version Tech CSS for this template -->
     <link href="css/TopHeader.css" rel="stylesheet"> 
-    <link rel="stylesheet" href="css/search1.css"> 
+    <link rel="stylesheet" href="css/search1.css">
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"> 
     
     <!-- ================================ footer ========================================================= -->
     <!-- Required meta tags -->
@@ -38,15 +40,7 @@
     <link rel="stylesheet" href="css/styleFooter.css">
    
     <!-- ================================= contant ====================================== -->
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-        body {font-family: "Lato", sans-serif}
-    .mySlides {display: none}
-    </style>
-
-
+  
 </head>
 
 <body>
@@ -54,7 +48,7 @@
     <div id="wrapper">
         <header class="tech-header header">
             <div class="container-fluid">
-                <nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
+                <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
                    
                     <!-- ปุ่มย่อ -->
                     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -65,11 +59,19 @@
                     <a class="navbar-brand" href="home.html"><img src="images/logo.png" alt="" width="85px"></a>
                     <div class="collapse navbar-collapse" id="navbarCollapse">
 
-                        <form method="get" action="/search" id="search">
-                            <input name="q" type="text" size="40" placeholder="Search..." />
-                          </form>
-                      
                         <ul class="navbar-nav mr-auto">
+                            
+                        <div class="search-box">
+                            <input type="text" placeholder="Type to search..">
+                            <div class="search-icon">
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <div class="cancel-icon">
+                                <i class="fas fa-times"></i>
+                            </div>
+                            <div class="search-data">
+                            </div>
+                        </div>
 
                             <li class="nav-item dropdown">
                                 <!-- {% if request.user.is_authenticated and request.user.first_name %} -->
@@ -132,15 +134,12 @@
     </div>
 
         <!-- ================= เนื้อหา ============================ -->
-        
-        <div class = "container">
-            {% block content %}
-            <section>
-            </section>
-            {% endblock %}
-        </div>
-   
+     
+  
+    
+
     <!-- ================= footer ============================ -->
+    
     <footer class="footer-32892 pb-0">
         <div class="site-section">
           <div class="container">
@@ -169,7 +168,7 @@
             </div>
           </div>
         </div>
-      </footer>
+    </footer>
 
       <!-- Core JavaScript  -->
     <!-- ================= script header ============================ -->
@@ -177,6 +176,35 @@
     <script src="js/tether.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/custom.js"></script>
+    <script>
+        const searchBox = document.querySelector(".search-box");
+const searchBtn = document.querySelector(".search-icon");
+const cancelBtn = document.querySelector(".cancel-icon");
+const searchInput = document.querySelector("input");
+const searchData = document.querySelector(".search-data");
+searchBtn.onclick =()=>{
+searchBox.classList.add("active");
+searchBtn.classList.add("active");
+searchInput.classList.add("active");
+cancelBtn.classList.add("active");
+searchInput.focus();
+if(searchInput.value != ""){
+var values = searchInput.value;
+searchData.classList.remove("active");
+searchData.innerHTML = "You just typed " + "<span style='font-weight: 500;'>" + values + "</span>";
+}else{
+searchData.textContent = "";
+}
+}
+cancelBtn.onclick =()=>{
+searchBox.classList.remove("active");
+searchBtn.classList.remove("active");
+searchInput.classList.remove("active");
+cancelBtn.classList.remove("active");
+searchData.classList.toggle("active");
+searchInput.value = "";
+}
+    </script>
 
     <!-- ================= script footer ============================ -->
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -184,7 +212,6 @@
       <script src="js/popper.min.js"></script>
 
     <!-- ================= script เนื้อหา ============================ -->
-
     
 </body>
 </html>
