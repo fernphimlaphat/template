@@ -27,6 +27,8 @@
     <!-- Version Tech CSS for this template -->
     <link href="css/TopHeader.css" rel="stylesheet"> 
     <link rel="stylesheet" href="css/search1.css"> 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"> 
+
     
     <!-- ================================ footer ========================================================= -->
     <!-- Required meta tags -->
@@ -251,6 +253,35 @@
     <script src="js/tether.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/custom.js"></script>
+    <script>
+      const searchBox = document.querySelector(".search-box");
+const searchBtn = document.querySelector(".search-icon");
+const cancelBtn = document.querySelector(".cancel-icon");
+const searchInput = document.querySelector("input");
+const searchData = document.querySelector(".search-data");
+searchBtn.onclick =()=>{
+searchBox.classList.add("active");
+searchBtn.classList.add("active");
+searchInput.classList.add("active");
+cancelBtn.classList.add("active");
+searchInput.focus();
+if(searchInput.value != ""){
+var values = searchInput.value;
+searchData.classList.remove("active");
+searchData.innerHTML = "You just typed " + "<span style='font-weight: 500;'>" + values + "</span>";
+}else{
+searchData.textContent = "";
+}
+}
+cancelBtn.onclick =()=>{
+searchBox.classList.remove("active");
+searchBtn.classList.remove("active");
+searchInput.classList.remove("active");
+cancelBtn.classList.remove("active");
+searchData.classList.toggle("active");
+searchInput.value = "";
+}
+  </script>
 
     <!-- ================= script footer ============================ -->
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
