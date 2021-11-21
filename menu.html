@@ -39,13 +39,75 @@
     <!-- Style CSS -->
     <link rel="stylesheet" href="css/styleFooter.css">
    
-    <!-- ================================= contant ====================================== -->
+    <!-- ================================= Contant ====================================== -->
+
+     <!-- ================================= cartDeatil ====================================== -->
+
+     <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css">
+     <link rel="stylesheet" href="fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
+     <link rel="stylesheet" href="css/style_register.css">
+         <style>
+             .red{
+                 background-color: #f4511e !important;
+                 display:inline-block;padding:6px 12px;margin-bottom:0;font-size:14px;font-weight:400;line-height:1.42857143;text-align:center;white-space:nowrap;vertical-align:middle;-ms-touch-action:manipulation;touch-action:manipulation;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;background-image:none;border:1px solid transparent;border-radius:4px !important;
+             }
+         </style>
+
+    <!-- ================================= home ====================================== -->
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
     <style>
     body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
     .w3-bar-block .w3-bar-item {padding:20px}
     </style>
+    <!-- ================================= login ====================================== -->
+    <link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="js/vendor/animate/animate.css">
+    <link rel="stylesheet" type="text/css" href="js/vendor/css-hamburgers/hamburgers.min.css">
+    <link rel="stylesheet" type="text/css" href="js/vendor/select2/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="css/util.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+
+    <!-- ================================= menu ====================================== -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+    <style>
+    h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
+    .w3-bar-block .w3-bar-item {padding:20px}
+    </style>
+    <!-- ================================= Order info ====================================== -->
+    <style>
+      .Yellow{
+              background-color: #ffeb3b !important;
+              display:inline-block;padding:6px 12px;margin-bottom:0;font-size:14px;font-weight:400;line-height:1.42857143;text-align:center;white-space:nowrap;vertical-align:middle;-ms-touch-action:manipulation;touch-action:manipulation;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;background-image:none;border:1px solid transparent;border-radius:4px !important;
+          }
+    </style>
+    <!-- ================================= Order History ====================================== -->
+    <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css">
+    <style>
+      .Yellow_his{
+              background-color: #ffeb3b !important;
+              display:inline-block;padding:6px 12px;margin-bottom:0;font-size:14px;font-weight:400;line-height:1.42857143;text-align:center;white-space:nowrap;vertical-align:middle;-ms-touch-action:manipulation;touch-action:manipulation;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;background-image:none;border:1px solid transparent;border-radius:4px !important;
+          }
+  </style>
+    <!-- ================================= register ====================================== -->
+    <link rel="stylesheet" href="fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="css/style_register.css">
+
+    <!-- ================================= thanks ====================================== -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+    <style>
+    body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
+    .w3-bar-block .w3-bar-item {padding:20px}
+    </style>
+
+
 </head>
 
 <body>
@@ -53,7 +115,7 @@
     <div id="wrapper">
         <header class="tech-header header">
             <div class="container-fluid">
-                <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
+                <nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
                    
                     <!-- ปุ่มย่อ -->
                     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -137,6 +199,8 @@
             </div><!-- end container-fluid -->
         </header><!-- end market-header -->
     </div>
+        <!-- end market-header -->
+
 
         <!-- ================= เนื้อหา ============================ -->
         <div class = "container">
@@ -215,7 +279,7 @@
           </section>
           {% endblock %}
       </div>
-
+     
     <!-- ================= footer ============================ -->
     
     <footer class="footer-32892 pb-0">
@@ -290,7 +354,55 @@ searchInput.value = "";
       <script src="js/popper.min.js"></script>
 
     <!-- ================= script เนื้อหา ============================ -->
+    <!-- ================= script Home============================ -->
+    <script>
         
+      // Automatic Slideshow - change image every 4 seconds
+      var myIndex = 0;
+      carousel();
+      
+      function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";  
+        }
+        myIndex++;
+        if (myIndex > x.length) {myIndex = 1}    
+        x[myIndex-1].style.display = "block";  
+        setTimeout(carousel, 4000);    
+      }
+      
+      // Used to toggle the menu on small screens when clicking on the menu button
+      function myFunction() {
+        var x = document.getElementById("navDemo");
+        if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+        } else { 
+          x.className = x.className.replace(" w3-show", "");
+        }
+      }
+      
+      // When the user clicks anywhere outside of the modal, close it
+      var modal = document.getElementById('ticketModal');
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+    </script>
+    <!-- ================= script login ============================ -->
+        <script src="js/vendor/bootstrap/js/popper.js"></script>
+        <script src="js/vendor/bootstrap/js/bootstrap.min.js"></script>
+        <script src="js/vendor/select2/select2.min.js"></script>
+        <script src="js/vendor/tilt/tilt.jquery.min.js"></script>
+        <script >
+            $('.js-tilt').tilt({
+                scale: 1.1
+            })
+        </script>
+        <script src="js/main.js"></script>
+    <!-- ================= script menu ============================ -->
     <script>
       // Script to open and close sidebar
       function w3_open() {
@@ -301,6 +413,52 @@ searchInput.value = "";
         document.getElementById("mySidebar").style.display = "none";
       }
   </script>
+    <!-- ================================= script Order info ====================================== -->
+    <script>
+      // Script to open and close sidebar
+      function w3_open() {
+        document.getElementById("mySidebar").style.display = "block";
+      }
+       
+      function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+      }
+    </script>
+    <!-- ================================= script His ====================================== -->
+    <script>
+      // Script to open and close sidebar
+      function w3_open() {
+        document.getElementById("mySidebar").style.display = "block";
+      }
+       
+      function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+      }
+    </script>
+    <!-- ================================= script register ====================================== -->
+    <script>
+      // Script to open and close sidebar
+      function w3_open() {
+        document.getElementById("mySidebar").style.display = "block";
+      }
+       
+      function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+      }
+    </script>
+    <!-- ================================= script thanks ====================================== -->
+    <script>
+      // Script to open and close sidebar
+      function w3_open() {
+        document.getElementById("mySidebar").style.display = "block";
+      }
+       
+      function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+      }
+    </script>
+
+
 
 </body>
 </html>

@@ -21,6 +21,49 @@
   src: url('../fonts/montserrat/Montserrat-Bold.ttf'); 
 }
 
+.WRAPPER{
+  width: 100%;  
+min-height: 40rem;
+display: -webkit-box;
+display: -webkit-flex;
+display: -moz-box;
+display: -ms-flexbox;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+padding: 15px;
+}
+
+.WRAPPER_OrderInfo{
+  width: 100%;  
+  min-height: 50rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+
+}
+
+.WRAPPER_OrderHis{
+  width: 100%;  
+  min-height: 35rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
